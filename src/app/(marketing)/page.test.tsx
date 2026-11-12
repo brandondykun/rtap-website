@@ -40,7 +40,7 @@ it('has the section anchors the nav links to', () => {
 });
 
 it('shows the badge in the hero and the closing call to action', () => {
-  expect(screen.getAllByText(/coming soon on ios/i)).toHaveLength(2);
+  expect(screen.getAllByText(/coming soon on ios & android/i)).toHaveLength(2);
 });
 
 it('explains range rings for indirect fire and air defense', () => {
@@ -60,7 +60,7 @@ it('shows the landscape screenshots', () => {
 it('says up front that V1 is an early release with more coming', () => {
   const hero = screen.getByRole('heading', { level: 1 }).closest('section')!;
   expect(hero).toHaveTextContent(/early release/i);
-  expect(hero).toHaveTextContent(/free on iphone at launch/i);
+  expect(hero).toHaveTextContent(/free on iphone and android at launch/i);
 });
 
 it('makes no offline claim the V1 map imagery cannot keep', () => {
@@ -82,8 +82,8 @@ it('backs the who-built-it claim with specifics', () => {
   expect(text).toMatch(/1 m/);
 });
 
-it('tells an excited visitor the closing facts: free, iPhone, early release', () => {
+it('tells an excited visitor the closing facts: free, iPhone and Android, early release', () => {
   const closing = [...document.querySelectorAll('section')].at(-1)!;
-  expect(closing).toHaveTextContent(/free on iphone at launch/i);
+  expect(closing).toHaveTextContent(/free on iphone and android at launch/i);
   expect(closing).toHaveTextContent(/early release/i);
 });

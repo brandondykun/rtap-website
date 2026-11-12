@@ -36,7 +36,7 @@ export function Hero() {
             </a>
           </div>
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-text-muted">
-            <span className="font-semibold text-text">Free on iPhone at launch.</span> This early release is the local-first
+            <span className="font-semibold text-text">Free on iPhone and Android at launch.</span> This early release is the local-first
             core. Shared maps and live team positions are in development.
           </p>
         </div>

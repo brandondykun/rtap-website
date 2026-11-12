@@ -14,7 +14,7 @@ const FAQ = [
     'Can my team see my map?',
     'Not yet. Cloud sync, shared maps and live team positions are in development for V2.',
   ],
-  ['Which phones does RTAP run on?', 'iPhone.'],
+  ['Which phones does RTAP run on?', 'iPhone and Android. Both are coming soon.'],
 ] as const;
 
 export default function Support() {

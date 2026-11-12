@@ -30,7 +30,7 @@ Run lint, typecheck, test, build and e2e before calling a change done.
 - **Colors mirror the app.** The tokens in `src/app/globals.css` copy `map/src/theme/tokens.ts`. Change them together.
 - **Value colors keep their meaning** (see `../map/AGENTS.md`, Value colors): `friendly` sky blue only for your own
   and friendly grids, `value-distance` amber for distances, affiliation colors only on unit symbols.
-- **Be honest about status.** Until launch, the only call to action is `StoreBadge` ("Coming soon on iOS", with no
+- **Be honest about status.** Until launch, the only call to action is `StoreBadge` ("Coming soon on iOS & Android", with no
   Apple logo or App Store mark). Set `site.appStoreUrl` and add Apple's official badge to `public/badges/` at launch.
   V2 features (cloud sync, shared maps, team positions) are only ever "coming soon" or "in development".
 - **Tone:** calm, precise, technical. No camo, skulls, fake classification stamps, or copy that implies real-world

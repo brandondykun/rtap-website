@@ -5,10 +5,10 @@ afterEach(() => {
   vi.doUnmock('@/config/site');
 });
 
-it('shows Coming soon on iOS with no link and no Apple branding before launch', async () => {
+it('shows Coming soon on iOS & Android with no link and no Apple branding before launch', async () => {
   const { StoreBadge } = await import('./StoreBadge');
   render(<StoreBadge />);
-  expect(screen.getByText(/coming soon on ios/i)).toBeInTheDocument();
+  expect(screen.getByText(/coming soon on ios & android/i)).toBeInTheDocument();
   expect(screen.queryByRole('link')).toBeNull();
   expect(document.body.textContent).not.toMatch(/|App Store|Download/);
 });
