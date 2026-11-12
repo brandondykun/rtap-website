@@ -24,7 +24,7 @@ export function Hero() {
           <p className="mt-3 font-mono text-xs tracking-wide text-text-muted">Realtime Team Awareness Platform</p>
           <Tagline className="mt-7 text-xl sm:text-2xl lg:text-[28px]" />
           <p className="mt-5 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
-            An offline-first tactical map for plotting units, routes and objectives on real terrain, in 2D, 3D, or from the
+            An offline-first tactical map for plotting points, units, lines and areas on real terrain, in 2D, 3D, or from the
             ground. Built by military and geospatial professionals.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">

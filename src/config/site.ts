@@ -3,7 +3,7 @@ export const site = {
   fullName: 'Realtime Team Awareness Platform',
   tagline: 'Locate. Communicate. Dominate.',
   description:
-    'An offline-first tactical map for plotting units, routes and objectives on real terrain. Built by military and geospatial professionals.',
+    'An offline-first tactical map for plotting points, units, lines and areas on real terrain. Built by military and geospatial professionals.',
   company: 'Eratas Software LLC',
   supportEmail: 'support@eratas.dev',
   /** The App Store listing. null until launch; set it to switch every badge to Apple's official Download badge. */
