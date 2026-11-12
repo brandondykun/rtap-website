@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/*
+ * Colors mirror the mobile app's dark theme (map/src/theme/tokens.ts). Change them together.
+ * Value colors keep their meaning: friendly = your/friendly grids, value-distance = distances. See ../map/AGENTS.md.
+ */
+@theme {
+  --color-bg: #0c0a09;
+  --color-surface: #1c1917;
+  --color-surface-raised: #292524;
+  --color-border: #44403c;
+  --color-border-subtle: #292524;
+  --color-text: #fafaf9;
+  --color-text-muted: #a8a29e;
+  --color-text-faint: #78716c;
+  --color-accent: #f59e0b;
+  --color-on-accent: #0a0a0a;
+  --color-friendly: #7dd3fc;
+  --color-hostile: #f87171;
+  --color-neutral: #86efac;
+  --color-unknown: #fde047;
+  --color-value-distance: #f59e0b;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
