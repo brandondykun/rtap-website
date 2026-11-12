@@ -20,11 +20,16 @@ test('every image on / loads', async ({ page }) => {
       await new Promise((r) => setTimeout(r, 100));
     }
   });
-  await page.waitForLoadState('networkidle');
-  const broken = await page.evaluate(() =>
-    [...document.images].filter((i) => i.checkVisibility() && !(i.complete && i.naturalWidth > 0)).map((i) => i.alt || i.src),
-  );
-  expect(broken).toEqual([]);
+  // networkidle has already fired by now, so poll: lazy images the scroll started can still be on their way.
+  await expect
+    .poll(
+      () =>
+        page.evaluate(() =>
+          [...document.images].filter((i) => i.checkVisibility() && !(i.complete && i.naturalWidth > 0)).map((i) => i.alt || i.src),
+        ),
+      { timeout: 15_000 },
+    )
+    .toEqual([]);
 });
 
 test('no console errors on /', async ({ page }) => {
