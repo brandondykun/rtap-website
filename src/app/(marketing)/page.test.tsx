@@ -15,7 +15,7 @@ it('renders the hero brand lockup and tagline', () => {
 it('renders every section heading from the spec in order', () => {
   const headings = screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent);
   expect(headings).toEqual([
-    'Explore in 3D. Plot from where you stand.',
+    'Explore in 3D. See the ground like you’re standing on it.',
     'Built for the way units plan and move.',
     'MGRS grid lines, on or off.',
     'See what each weapon can reach.',
@@ -87,4 +87,10 @@ it('tells an excited visitor the closing facts: free, iPhone and Android, early 
   const closing = [...document.querySelectorAll('section')].at(-1)!;
   expect(closing).toHaveTextContent(/free on iphone and android at launch/i);
   expect(closing).toHaveTextContent(/early release/i);
+});
+
+it('describes OP mode as seeing real-life terrain to help plot, not as aiming', () => {
+  const op = document.getElementById('3d-op')!;
+  expect(op).toHaveTextContent(/as you would in real life/i);
+  expect(op).not.toHaveTextContent(/line up the crosshair on a target/i);
 });

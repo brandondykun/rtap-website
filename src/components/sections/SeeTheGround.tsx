@@ -13,7 +13,7 @@ const ITEMS: { tag: string; title: string; body: string; shot: ScreenshotKey }[]
   {
     tag: 'OP mode',
     title: 'See it from the ground',
-    body: "Pick an observation post and set your eye height. Look out over the terrain as you'd see it, line up the crosshair on a target, and plot it with its grid, range and direction from the OP.",
+    body: "Pick an observation post and set your eye height. You see the terrain as you would in real life, so it’s easier to match the map to what’s in front of you and plot a target.",
     shot: 'op',
   },
 ];
@@ -22,7 +22,7 @@ export function SeeTheGround() {
   return (
     <Section id="3d-op" className="bg-gradient-to-b from-bg to-[#14110f]">
       <Eyebrow>See the ground</Eyebrow>
-      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Explore in 3D. Plot from where you stand.</h2>
+      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Explore in 3D. See the ground like you’re standing on it.</h2>
       <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted sm:text-lg">
         A flat map only tells you half the story. Tilt into real terrain to read the hills and valleys, or drop into OP mode
         and see what you&apos;d see from the ground.
