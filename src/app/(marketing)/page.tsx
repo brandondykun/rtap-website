@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Landscape />
       <SeeTheGround />
       <Capabilities />
       <RangeRings />
-      <WhoBuiltIt />
+      <Landscape />
       <LocalFirst />
+      <WhoBuiltIt />
       <Roadmap />
       <ClosingCta />
     </>

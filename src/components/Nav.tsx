@@ -8,6 +8,7 @@ import { Logo } from './Logo';
 const LINKS = [
   { href: '/#features', label: 'Features' },
   { href: '/#3d-op', label: '3D & OP' },
+  { href: '/#range-rings', label: 'Range rings' },
   { href: '/#roadmap', label: 'Roadmap' },
   { href: '/support', label: 'Support' },
 ] as const;

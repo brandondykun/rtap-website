@@ -10,6 +10,9 @@ export function ClosingCta() {
       <PhoneFrame shot={screenshots.landing} sizes="180px" className="w-[180px] flex-none" />
       <div>
         <Tagline className="text-2xl sm:text-3xl" />
+        <p className="mt-4 max-w-md text-base leading-relaxed text-text-muted">
+          Free on iPhone at launch. V1 is an early release, with sync and team sharing in development.
+        </p>
         <div className="mt-6">
           <StoreBadge />
         </div>

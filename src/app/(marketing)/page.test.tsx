@@ -15,18 +15,18 @@ it('renders the hero brand lockup and tagline', () => {
 it('renders every section heading from the spec in order', () => {
   const headings = screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent);
   expect(headings).toEqual([
-    'Turn it sideways. See more ground.',
     'Explore in 3D. Plot from where you stand.',
     'Built for the way units plan and move.',
     'See what each weapon can reach.',
+    'Turn it sideways. See more ground.',
+    'Your plots keep working with no signal.',
     'Built by military and geospatial professionals.',
-    'Works with no signal. Your data stays on your phone.',
-    'Your team, on the same map.',
+    'This is V1. The team features are next.',
   ]);
 });
 
-it('marks V2 as in development and V1 as at launch', () => {
-  expect(screen.getByText(/V1 · At launch/i)).toBeInTheDocument();
+it('marks V2 as in development and V1 as the early release', () => {
+  expect(document.getElementById('roadmap')).toHaveTextContent(/V1 · Early release/i);
   expect(screen.getByText(/V2 · In development/i)).toBeInTheDocument();
   expect(screen.getByText('No account needed')).toBeInTheDocument();
 });
@@ -55,4 +55,35 @@ it('explains range rings for indirect fire and air defense', () => {
 it('shows the landscape screenshots', () => {
   const section = document.getElementById('landscape')!;
   expect(section.querySelectorAll('img')).toHaveLength(3);
+});
+
+it('says up front that V1 is an early release with more coming', () => {
+  const hero = screen.getByRole('heading', { level: 1 }).closest('section')!;
+  expect(hero).toHaveTextContent(/early release/i);
+  expect(hero).toHaveTextContent(/free on iphone at launch/i);
+});
+
+it('makes no offline claim the V1 map imagery cannot keep', () => {
+  const text = document.body.textContent!;
+  expect(text).not.toMatch(/works fully offline|0 bars|works with no signal/i);
+  expect(text).toMatch(/imagery you've already viewed/i);
+});
+
+it('keeps the no-servers, no-networking points with V2, not V1', () => {
+  const v2 = screen.getByText(/V2 · In development/i).closest('div')!;
+  expect(v2).toHaveTextContent(/no servers/i);
+  expect(v2).toHaveTextContent(/cell signal/i);
+  expect(document.getElementById('roadmap')!.previousElementSibling).not.toHaveTextContent(/no servers/i);
+});
+
+it('backs the who-built-it claim with specifics', () => {
+  const text = document.body.textContent!;
+  expect(text).toMatch(/grid, true or magnetic north/i);
+  expect(text).toMatch(/1 m/);
+});
+
+it('tells an excited visitor the closing facts: free, iPhone, early release', () => {
+  const closing = [...document.querySelectorAll('section')].at(-1)!;
+  expect(closing).toHaveTextContent(/free on iphone at launch/i);
+  expect(closing).toHaveTextContent(/early release/i);
 });

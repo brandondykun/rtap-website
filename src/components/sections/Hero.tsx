@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row md:items-end md:gap-10">
         <div className="w-full flex-1 pb-4 md:pb-24">
-          <Eyebrow>Tactical mapping</Eyebrow>
+          <Eyebrow>V1 · Early release</Eyebrow>
           <h1 className="mt-4">
             <Logo size="lg" />
           </h1>
@@ -35,6 +35,10 @@ export function Hero() {
               See features ↓
             </a>
           </div>
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-text-muted">
+            <span className="font-semibold text-text">Free on iPhone at launch.</span> This early release is the local-first
+            core. Shared maps and live team positions are in development.
+          </p>
         </div>
 
         <div className="relative h-[440px] w-[260px] flex-none sm:h-[560px] sm:w-[400px]">

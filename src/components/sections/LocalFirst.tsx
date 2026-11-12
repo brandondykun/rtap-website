@@ -2,19 +2,19 @@ import { Eyebrow } from '@/components/Eyebrow';
 import { Section } from '@/components/Section';
 
 const POINTS = [
-  ['No servers to set up', 'Nothing to host, install or maintain.'],
-  ['No networking', 'No radios to pair, no IP addresses, no IT team.'],
-  ["Just your phone's service", 'When sync arrives in V2, it rides the cell signal you already have.'],
+  ['Saved the moment you plot', 'Every unit, line and area is written to your phone straight away. Nothing waits on a connection.'],
+  ['No sign-up', 'Open the app and start plotting. No account, no login.'],
+  ['Your data stays on your phone', 'V1 keeps every mission on your device. Nothing you plot is uploaded.'],
 ] as const;
 
 export function LocalFirst() {
   return (
     <Section>
       <Eyebrow>Local-first</Eyebrow>
-      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Works with no signal. Your data stays on your phone.</h2>
+      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Your plots keep working with no signal.</h2>
       <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted sm:text-lg">
-        Everything you plot is saved on your phone the moment you do it, so the map never waits on a connection. No servers to
-        set up, no networking, no IT team.
+        With no signal, your units, lines, grids, measurements and GPS position all keep working, and the map imagery
+        you&apos;ve already viewed stays on screen. New areas need a connection to load.
       </p>
       <ul className="mt-10 grid gap-6 md:grid-cols-3">
         {POINTS.map(([title, body]) => (

@@ -4,7 +4,7 @@ import { Nav } from './Nav';
 
 it('Nav links to the section anchors and support', () => {
   render(<Nav />);
-  for (const [name, href] of [['Features', '/#features'], ['3D & OP', '/#3d-op'], ['Roadmap', '/#roadmap'], ['Support', '/support']])
+  for (const [name, href] of [['Features', '/#features'], ['3D & OP', '/#3d-op'], ['Range rings', '/#range-rings'], ['Roadmap', '/#roadmap'], ['Support', '/support']])
     expect(screen.getAllByRole('link', { name })[0]).toHaveAttribute('href', href);
   expect(screen.getByText('Coming soon')).toBeInTheDocument();
 });
