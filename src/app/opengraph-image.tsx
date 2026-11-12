@@ -7,11 +7,13 @@ export const alt = `${site.name}: ${site.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
+// Read at module load (not per request) so the image is prerendered at build time.
+const [mono, logo] = await Promise.all([
+  readFile(join(process.cwd(), 'src/assets/fonts/JetBrainsMono-Bold.woff')),
+  readFile(join(process.cwd(), 'src/assets/logo-mark.png')),
+]);
+
 export default async function Image() {
-  const [mono, logo] = await Promise.all([
-    readFile(join(process.cwd(), 'src/assets/fonts/JetBrainsMono-Bold.woff')),
-    readFile(join(process.cwd(), 'src/assets/logo-mark.png')),
-  ]);
   const logoSrc = `data:image/png;base64,${logo.toString('base64')}`;
   return new ImageResponse(
     (
