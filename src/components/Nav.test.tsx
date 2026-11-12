@@ -1,0 +1,20 @@
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { Nav } from './Nav';
+
+it('Nav links to the section anchors and support', () => {
+  render(<Nav />);
+  for (const [name, href] of [['Features', '/#features'], ['3D & OP', '/#3d-op'], ['Roadmap', '/#roadmap'], ['Support', '/support']])
+    expect(screen.getAllByRole('link', { name })[0]).toHaveAttribute('href', href);
+  expect(screen.getByText('Coming soon')).toBeInTheDocument();
+});
+
+it('Nav menu opens and closes on mobile with an accessible toggle', async () => {
+  render(<Nav />);
+  const toggle = screen.getByRole('button', { name: /menu/i });
+  expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  await userEvent.click(toggle);
+  expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  await userEvent.click(screen.getAllByRole('link', { name: 'Roadmap' }).at(-1)!);
+  expect(toggle).toHaveAttribute('aria-expanded', 'false');
+});
