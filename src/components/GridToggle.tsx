@@ -6,10 +6,10 @@ import { screenshots } from '@/content/screenshots';
 
 const SHOTS = [
   { on: true, shot: screenshots.landscapeGrid },
-  { on: false, shot: screenshots.landscapeMap },
+  { on: false, shot: screenshots.gridOff },
 ] as const;
 
-/** The same map with the MGRS grid on and off, behind a real switch. Both images stay mounted so the swap cross-fades. */
+/** The same map, from the same spot, with the MGRS grid on and off, behind a real switch. Both images stay mounted so the swap cross-fades. */
 export function GridToggle() {
   const [on, setOn] = useState(true);
   return (
