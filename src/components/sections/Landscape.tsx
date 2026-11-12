@@ -19,12 +19,12 @@ export function Landscape() {
       </p>
       <PhoneFrame
         shot={screenshots.landscape3d}
-        sizes="(min-width: 1152px) 1152px, 100vw"
-        className="mt-10 w-full rounded-[1.5rem] sm:rounded-[2.25rem]"
+        sizes="(min-width: 800px) 768px, 100vw"
+        className="mx-auto mt-10 w-full max-w-3xl rounded-[1.5rem]"
       />
-      <div className="mt-6 grid gap-6 sm:grid-cols-2">
-        <PhoneFrame shot={screenshots.landscapeMap} sizes="(min-width: 640px) 50vw, 100vw" className="w-full rounded-[1.25rem]" />
-        <PhoneFrame shot={screenshots.landscapeLayers} sizes="(min-width: 640px) 50vw, 100vw" className="w-full rounded-[1.25rem]" />
+      <div className="mx-auto mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
+        <PhoneFrame shot={screenshots.landscapeMap} sizes="(min-width: 800px) 372px, (min-width: 640px) 50vw, 100vw" className="w-full rounded-[1rem]" />
+        <PhoneFrame shot={screenshots.landscapeLayers} sizes="(min-width: 800px) 372px, (min-width: 640px) 50vw, 100vw" className="w-full rounded-[1rem]" />
       </div>
       <ul className="mt-10 grid gap-6 md:grid-cols-3">
         {POINTS.map(([title, body]) => (
