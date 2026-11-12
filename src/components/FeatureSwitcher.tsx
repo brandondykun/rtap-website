@@ -40,7 +40,14 @@ export function FeatureSwitcher({ features, intervalMs = 6000 }: { features: Fea
     <>
       {/* Desktop */}
       <div className="hidden items-center gap-12 md:flex">
-        <div role="tablist" aria-orientation="vertical" aria-label="Capabilities" className="flex flex-1 flex-col gap-1">
+        <div
+          role="tablist"
+          aria-orientation="vertical"
+          aria-label="Capabilities"
+          onFocus={() => setAuto(false)}
+          onMouseEnter={() => setAuto(false)}
+          className="flex flex-1 flex-col gap-1"
+        >
           {features.map((f, i) => {
             const on = i === active;
             return (
@@ -60,7 +67,7 @@ export function FeatureSwitcher({ features, intervalMs = 6000 }: { features: Fea
                   on ? 'border-accent bg-gradient-to-r from-accent/10 to-transparent' : 'border-border-subtle hover:border-border'
                 }`}
               >
-                <span className={`block font-mono text-[10px] font-bold uppercase tracking-[0.2em] ${on ? 'text-accent' : 'text-text-faint'}`}>
+                <span className={`block font-mono text-[10px] font-bold uppercase tracking-[0.2em] ${on ? 'text-accent' : 'text-text-muted'}`}>
                   {f.tag}
                 </span>
                 <span className={`mt-1 block text-base font-semibold ${on ? 'text-text' : 'text-text-muted group-hover:text-text'}`}>

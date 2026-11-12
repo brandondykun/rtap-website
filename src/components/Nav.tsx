@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { site } from '@/config/site';
 import { Logo } from './Logo';
 
 const LINKS = [
@@ -29,7 +30,9 @@ export function Nav() {
           ))}
         </ul>
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Coming soon</span>
+          {!site.appStoreUrl && (
+            <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Coming soon</span>
+          )}
           <button
             type="button"
             aria-expanded={open}

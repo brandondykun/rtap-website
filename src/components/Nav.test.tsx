@@ -18,3 +18,14 @@ it('Nav menu opens and closes on mobile with an accessible toggle', async () => 
   await userEvent.click(screen.getAllByRole('link', { name: 'Roadmap' }).at(-1)!);
   expect(toggle).toHaveAttribute('aria-expanded', 'false');
 });
+
+it('drops the Coming soon label once the app is live', async () => {
+  const real = await vi.importActual<typeof import('@/config/site')>('@/config/site');
+  vi.resetModules();
+  vi.doMock('@/config/site', () => ({ ...real, site: { ...real.site, appStoreUrl: 'https://apps.apple.com/app/id1' } }));
+  const { Nav: LiveNav } = await import('./Nav');
+  render(<LiveNav />);
+  expect(screen.queryByText(/coming soon/i)).toBeNull();
+  vi.doUnmock('@/config/site');
+  vi.resetModules();
+});

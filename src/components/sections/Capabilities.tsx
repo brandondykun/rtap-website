@@ -11,7 +11,7 @@ export function Capabilities() {
       <div className="mt-10">
         <FeatureSwitcher features={features} />
       </div>
-      <p className="mt-8 text-sm text-text-faint">Plus GPS averaging, satellite, hybrid and topo maps, and labels on or off.</p>
+      <p className="mt-8 text-sm text-text-muted">Plus GPS averaging, satellite, hybrid and topo maps, and labels on or off.</p>
     </Section>
   );
 }

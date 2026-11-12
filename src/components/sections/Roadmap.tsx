@@ -29,7 +29,7 @@ export function Roadmap() {
             <ul className="mt-3 space-y-2 text-sm text-text-muted">
               {c.items.map((i) => (
                 <li key={i} className="flex gap-2.5">
-                  <span aria-hidden className="mt-[7px] h-1.5 w-1.5 flex-none rotate-45 bg-text-faint" />
+                  <span aria-hidden className="mt-[7px] h-1.5 w-1.5 flex-none rotate-45 bg-text-muted" />
                   {i}
                 </li>
               ))}

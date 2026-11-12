@@ -22,7 +22,7 @@ export function Prose({
       <Eyebrow>{eyebrow}</Eyebrow>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h1>
       {updated && (
-        <p className="!mt-3 font-mono text-xs text-text-faint">
+        <p className="!mt-3 font-mono text-xs text-text-muted">
           Last updated <time dateTime={updated}>{updated}</time>
         </p>
       )}

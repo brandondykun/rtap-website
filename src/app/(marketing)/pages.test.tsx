@@ -8,6 +8,11 @@ it('Support has a mailto link to support@eratas.dev', () => {
   expect(screen.getByRole('link', { name: 'support@eratas.dev' })).toHaveAttribute('href', 'mailto:support@eratas.dev');
 });
 
+it('Support makes no promise about Android', () => {
+  render(<Support />);
+  expect(document.body.textContent).not.toMatch(/android/i);
+});
+
 it('Terms says not for real-world military use or targeting', () => {
   render(<Terms />);
   expect(document.body.textContent).toMatch(/Not for real-world military use or targeting\./);

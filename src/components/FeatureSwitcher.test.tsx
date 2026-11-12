@@ -72,3 +72,10 @@ it('arrow keys move selection', () => {
   expect(tabs()[0]).toHaveAttribute('tabindex', '-1');
   expect(tabs()[features.length - 1]).toHaveAttribute('tabindex', '0');
 });
+
+it('stops auto-advancing when a tab gets keyboard focus', () => {
+  render(<FeatureSwitcher features={features} />);
+  fireEvent.focus(tabs()[0]);
+  act(() => vi.advanceTimersByTime(20000));
+  expect(selected()).toBe(0);
+});
