@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image';
 import landing from '@/assets/screenshots/landing.png';
 import landscape3d from '@/assets/screenshots/landscape-3d.png';
+import landscapeGrid from '@/assets/screenshots/landscape-grid.png';
 import landscapeLayers from '@/assets/screenshots/landscape-layers.png';
 import landscapeMap from '@/assets/screenshots/landscape-map.png';
 import map from '@/assets/screenshots/map.png';
@@ -16,7 +17,7 @@ import unit from '@/assets/screenshots/unit.png';
 
 export type ScreenshotKey =
   | 'map' | 'threeD' | 'op' | 'unit' | 'quickPlot' | 'measure' | 'polygon' | 'overlays' | 'missions' | 'landing'
-  | 'landscapeMap' | 'landscape3d' | 'landscapeLayers' | 'rangeRing';
+  | 'landscapeMap' | 'landscapeGrid' | 'landscape3d' | 'landscapeLayers' | 'rangeRing';
 export type Screenshot = { src: StaticImageData; alt: string };
 
 /** Real iPhone screenshots of the app, shown whole. The landscape ones are 2556 × 1179. */
@@ -32,6 +33,7 @@ export const screenshots: Record<ScreenshotKey, Screenshot> = {
   missions: { src: missions, alt: 'RTAP missions list: the last opened mission with its map preview and counts of units, points, lines and polygons' },
   landing: { src: landing, alt: 'RTAP welcome screen: the RTAP logo, "Locate. Communicate. Dominate." and two friendly units ranging a hostile' },
   landscapeMap: { src: landscapeMap, alt: 'RTAP in landscape: the full toolbar across the top, friendly and hostile units, phase lines PL-1 and PL-2 and engagement area EA-1 on satellite imagery' },
+  landscapeGrid: { src: landscapeGrid, alt: 'RTAP in landscape with the MGRS grid on: labelled 1 km grid lines over the satellite map, with units, phase lines and engagement area EA-1' },
   landscape3d: { src: landscape3d, alt: 'RTAP in landscape and 3D: hostile units on the slopes of a desert valley, a friendly unit in the foreground and the CTR and ME grid readouts' },
   landscapeLayers: { src: landscapeLayers, alt: 'RTAP in landscape with the layers panel open beside the map, listing 12 units with their grids while the map stays visible' },
   rangeRing: { src: rangeRing, alt: 'RTAP range ring: the unit card for HOS-7, a hostile mortar section with a 3200 m range ring, beside the map showing the ring around it' },

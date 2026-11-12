@@ -2,6 +2,7 @@ import { Capabilities } from '@/components/sections/Capabilities';
 import { ClosingCta } from '@/components/sections/ClosingCta';
 import { Hero } from '@/components/sections/Hero';
 import { Landscape } from '@/components/sections/Landscape';
+import { MgrsGrid } from '@/components/sections/MgrsGrid';
 import { LocalFirst } from '@/components/sections/LocalFirst';
 import { RangeRings } from '@/components/sections/RangeRings';
 import { Roadmap } from '@/components/sections/Roadmap';
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <SeeTheGround />
       <Capabilities />
+      <MgrsGrid />
       <RangeRings />
       <Landscape />
       <LocalFirst />

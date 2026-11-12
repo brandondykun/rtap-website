@@ -17,6 +17,7 @@ it('renders every section heading from the spec in order', () => {
   expect(headings).toEqual([
     'Explore in 3D. Plot from where you stand.',
     'Built for the way units plan and move.',
+    'MGRS grid lines, on or off.',
     'See what each weapon can reach.',
     'Turn it sideways. See more ground.',
     'Your plots keep working with no signal.',
@@ -36,7 +37,7 @@ it('never says Download before launch', () => {
 });
 
 it('has the section anchors the nav links to', () => {
-  for (const id of ['features', '3d-op', 'roadmap', 'landscape', 'range-rings']) expect(document.getElementById(id)).not.toBeNull();
+  for (const id of ['features', '3d-op', 'roadmap', 'landscape', 'range-rings', 'grid']) expect(document.getElementById(id)).not.toBeNull();
 });
 
 it('shows the badge in the hero and the closing call to action', () => {
