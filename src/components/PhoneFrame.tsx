@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import type { Screenshot } from '@/content/screenshots';
 
-/** A CSS phone around a whole, uncropped screenshot. */
+/**
+ * A CSS phone around a whole, uncropped screenshot: a near-black bezel (darker than the app's gray panels, so a screen
+ * edge never runs into it) inside a thin lighter rim.
+ */
 export function PhoneFrame({
   shot,
   sizes,
@@ -18,7 +21,7 @@ export function PhoneFrame({
 }) {
   return (
     <div
-      className={`overflow-hidden rounded-[2rem] border-[6px] border-surface bg-black shadow-[0_0_0_1px_var(--color-border),0_30px_70px_rgba(0,0,0,0.65)] ${className}`}
+      className={`overflow-hidden rounded-[2rem] border-[6px] border-[#050404] bg-black shadow-[0_0_0_1px_var(--color-border),0_30px_70px_rgba(0,0,0,0.65)] ${className}`}
     >
       <Image src={shot.src} alt={decorative ? '' : shot.alt} sizes={sizes} priority={priority} placeholder="blur" className="block h-auto w-full" />
     </div>
