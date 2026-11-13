@@ -15,8 +15,8 @@ it('renders the hero brand lockup and tagline', () => {
 it('renders every section heading from the spec in order', () => {
   const headings = screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent);
   expect(headings).toEqual([
-    'Explore in 3D. See the ground like you’re standing on it.',
-    'Built for the way units plan and move.',
+    'Explore in 3D. See the battlespace from every angle.',
+    'Every tool you need to plan, plot and win.',
     'MGRS grid lines, on or off.',
     'See what each weapon can reach.',
     'Turn it sideways. See more ground.',

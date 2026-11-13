@@ -22,7 +22,7 @@ export function SeeTheGround() {
   return (
     <Section id="3d-op" className="bg-gradient-to-b from-bg to-[#14110f]">
       <Eyebrow>See the ground</Eyebrow>
-      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Explore in 3D. See the ground like you’re standing on it.</h2>
+      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Explore in 3D. See the battlespace from every angle.</h2>
       <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted sm:text-lg">
         A flat map only tells you half the story. Tilt into real terrain to read the hills and valleys, or drop into OP mode
         and see what you&apos;d see from the ground.

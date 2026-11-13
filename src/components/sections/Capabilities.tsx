@@ -7,7 +7,7 @@ export function Capabilities() {
   return (
     <Section id="features">
       <Eyebrow>Capabilities</Eyebrow>
-      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Built for the way units plan and move.</h2>
+      <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Every tool you need to plan, plot and win.</h2>
       <div className="mt-10">
         <FeatureSwitcher features={features} />
       </div>
