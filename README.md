@@ -1,8 +1,9 @@
 # RTAP website
 
 The marketing site for **RTAP** (Realtime Team Awareness Platform), an offline-first tactical map for plotting
-points, units, lines and areas on real terrain, in 2D or 3D. This repo is the website; the mobile app and the API
-live in their own repositories.
+points, units, lines and areas on real terrain, in 2D or 3D. RTAP is
+[on the App Store](https://apps.apple.com/app/id6834856833) for iPhone, with Android coming soon. This repo is the
+website; the mobile app and the API live in their own repositories.
 
 ![The RTAP homepage: the hero with the tagline beside two phones showing the map in 2D and 3D](docs/readme/home.jpg)
 
@@ -17,8 +18,8 @@ live in their own repositories.
 | **Privacy** (`/privacy`) | The privacy policy. |
 | **Terms** (`/terms`) | The terms of use. |
 
-The app hasn't launched yet, so every download button reads "Coming soon on iOS & Android" until the store listings
-go live.
+Every download button links to the App Store listing (`appStoreUrl` in `src/config/site.ts`) with Apple's official
+badge. Without that URL, the buttons fall back to a "Coming soon" label with no Apple branding.
 
 ## Built with
 
@@ -86,6 +87,7 @@ The site should look and read like the app, so a few rules apply. Colors match t
 blue for friendly positions, amber for distances. Copy stays honest about what has shipped and what's still coming.
 The tone is calm and technical. [`AGENTS.md`](AGENTS.md) has the full list.
 
----
+## License
 
-© Eratas Software LLC
+Copyright © 2026 Eratas Software LLC. All rights reserved. The source is public to read, not open source: see
+[LICENSE](LICENSE).
