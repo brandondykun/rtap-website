@@ -31,7 +31,15 @@ export function Nav() {
           ))}
         </ul>
         <div className="flex items-center gap-3">
-          {!site.appStoreUrl && (
+          {site.appStoreUrl ? (
+            <a
+              href={site.appStoreUrl}
+              aria-label="Just released on the App Store"
+              className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent transition-colors hover:text-text"
+            >
+              Just released
+            </a>
+          ) : (
             <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Coming soon</span>
           )}
           <button

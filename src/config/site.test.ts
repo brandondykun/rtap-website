@@ -13,7 +13,7 @@ describe('siteUrl', () => {
 });
 
 describe('site', () => {
-  it('is pre-launch', () => expect(site.appStoreUrl).toBeNull());
+  it('links to the App Store listing for every country', () => expect(site.appStoreUrl).toBe('https://apps.apple.com/app/id6834856833'));
   it('has the support email and company', () => {
     expect(site.supportEmail).toBe('support@eratas.dev');
     expect(site.company).toBe('Eratas Software LLC');

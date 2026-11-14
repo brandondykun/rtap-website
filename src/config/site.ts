@@ -6,8 +6,8 @@ export const site = {
     'An offline-first tactical map for plotting points, units, lines and areas on real terrain. Built by military and geospatial professionals.',
   company: 'Eratas Software LLC',
   supportEmail: 'support@eratas.dev',
-  /** The App Store listing. null until launch; set it to switch every badge to Apple's official Download badge. */
-  appStoreUrl: null as string | null,
+  /** The App Store listing (no country, so Apple opens each visitor's own store). null shows the Coming soon badge instead. */
+  appStoreUrl: 'https://apps.apple.com/app/id6834856833' as string | null,
 };
 
 type Env = Record<string, string | undefined>;

@@ -6,6 +6,8 @@ afterEach(() => {
 });
 
 it('shows Coming soon on iOS & Android with no link and no Apple branding before launch', async () => {
+  const real = await vi.importActual<typeof import('@/config/site')>('@/config/site');
+  vi.doMock('@/config/site', () => ({ ...real, site: { ...real.site, appStoreUrl: null } }));
   const { StoreBadge } = await import('./StoreBadge');
   render(<StoreBadge />);
   expect(screen.getByText(/coming soon on ios & android/i)).toBeInTheDocument();

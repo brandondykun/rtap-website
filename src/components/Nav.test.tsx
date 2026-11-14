@@ -6,7 +6,8 @@ it('Nav links to the section anchors and support', () => {
   render(<Nav />);
   for (const [name, href] of [['Features', '/#features'], ['3D & OP', '/#3d-op'], ['Range rings', '/#range-rings'], ['Roadmap', '/#roadmap'], ['Support', '/support']])
     expect(screen.getAllByRole('link', { name })[0]).toHaveAttribute('href', href);
-  expect(screen.getByText('Coming soon')).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'Just released on the App Store' })).toHaveAttribute('href', 'https://apps.apple.com/app/id6834856833');
+  expect(screen.queryByText(/coming soon/i)).toBeNull();
 });
 
 it('Nav menu opens and closes on mobile with an accessible toggle', async () => {
@@ -19,13 +20,14 @@ it('Nav menu opens and closes on mobile with an accessible toggle', async () => 
   expect(toggle).toHaveAttribute('aria-expanded', 'false');
 });
 
-it('drops the Coming soon label once the app is live', async () => {
+it('shows Coming soon, with no link, when there is no App Store listing', async () => {
   const real = await vi.importActual<typeof import('@/config/site')>('@/config/site');
   vi.resetModules();
-  vi.doMock('@/config/site', () => ({ ...real, site: { ...real.site, appStoreUrl: 'https://apps.apple.com/app/id1' } }));
-  const { Nav: LiveNav } = await import('./Nav');
-  render(<LiveNav />);
-  expect(screen.queryByText(/coming soon/i)).toBeNull();
+  vi.doMock('@/config/site', () => ({ ...real, site: { ...real.site, appStoreUrl: null } }));
+  const { Nav: PreLaunchNav } = await import('./Nav');
+  render(<PreLaunchNav />);
+  expect(screen.getByText('Coming soon')).toBeInTheDocument();
+  expect(screen.queryByText(/just released/i)).toBeNull();
   vi.doUnmock('@/config/site');
   vi.resetModules();
 });

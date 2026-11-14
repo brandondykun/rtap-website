@@ -32,8 +32,10 @@ it('marks V2 as in development and V1 as the early release', () => {
   expect(screen.getByText('No account needed')).toBeInTheDocument();
 });
 
-it('never says Download before launch', () => {
-  expect(document.body.textContent).not.toMatch(/download/i);
+it('says it is just released on iPhone, with Android still coming soon', () => {
+  const hero = screen.getByRole('heading', { level: 1 }).closest('section')!;
+  expect(hero).toHaveTextContent(/just released on iphone/i);
+  expect(document.body.textContent).not.toMatch(/at launch|launching/i);
 });
 
 it('has the section anchors the nav links to', () => {
@@ -41,7 +43,10 @@ it('has the section anchors the nav links to', () => {
 });
 
 it('shows the badge in the hero and the closing call to action', () => {
-  expect(screen.getAllByText(/coming soon on ios & android/i)).toHaveLength(2);
+  const badges = screen.getAllByRole('link', { name: /download on the app store/i });
+  expect(badges).toHaveLength(2);
+  for (const b of badges) expect(b).toHaveAttribute('href', 'https://apps.apple.com/app/id6834856833');
+  expect(screen.queryByText(/coming soon on ios & android/i)).toBeNull();
 });
 
 it('explains range rings for indirect fire and air defense', () => {
@@ -61,7 +66,7 @@ it('shows the landscape screenshots', () => {
 it('says up front that V1 is an early release with more coming', () => {
   const hero = screen.getByRole('heading', { level: 1 }).closest('section')!;
   expect(hero).toHaveTextContent(/early release/i);
-  expect(hero).toHaveTextContent(/free on iphone and android at launch/i);
+  expect(hero).toHaveTextContent(/free on iphone now\. android is coming soon/i);
 });
 
 it('makes no offline claim the V1 map imagery cannot keep', () => {
@@ -85,7 +90,7 @@ it('backs the who-built-it claim with specifics', () => {
 
 it('tells an excited visitor the closing facts: free, iPhone and Android, early release', () => {
   const closing = [...document.querySelectorAll('section')].at(-1)!;
-  expect(closing).toHaveTextContent(/free on iphone and android at launch/i);
+  expect(closing).toHaveTextContent(/free on iphone now, with android coming soon/i);
   expect(closing).toHaveTextContent(/early release/i);
 });
 

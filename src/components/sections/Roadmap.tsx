@@ -27,7 +27,7 @@ export function Roadmap() {
       <Eyebrow>Roadmap</Eyebrow>
       <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">This is V1. The team features are next.</h2>
       <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted sm:text-lg">
-        RTAP is launching as an early release: the local-first map comes first, built to be solid on its own. Sync and
+        RTAP V1 is an early release: the local-first map comes first, built to be solid on its own. Sync and
         sharing are being built on top of it, so your whole team can work from the same map.
       </p>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
