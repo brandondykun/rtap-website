@@ -5,7 +5,7 @@ points, units, lines and areas on real terrain, in 2D or 3D. RTAP is
 [on the App Store](https://apps.apple.com/app/id6834856833) for iPhone, with Android coming soon. This repo is the
 website; the mobile app and the API live in their own repositories.
 
-![The RTAP homepage: the hero with the tagline beside two phones showing the map in 2D and 3D](docs/readme/home.jpg)
+![The RTAP homepage: the tagline and the Download on the App Store button beside two phones showing the map in 2D and 3D](docs/readme/home.jpg)
 
 > **Training and simulation only.** RTAP is not for real-world military use or targeting.
 
