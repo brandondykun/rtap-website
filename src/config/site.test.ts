@@ -14,6 +14,7 @@ describe('siteUrl', () => {
 
 describe('site', () => {
   it('links to the App Store listing for every country', () => expect(site.appStoreUrl).toBe('https://apps.apple.com/app/id6834856833'));
+  it('links to the Google Play listing in every language', () => expect(site.playStoreUrl).toBe('https://play.google.com/store/apps/details?id=com.eratas.rtap'));
   it('has the support email and company', () => {
     expect(site.supportEmail).toBe('support@eratas.dev');
     expect(site.company).toBe('Eratas Software LLC');

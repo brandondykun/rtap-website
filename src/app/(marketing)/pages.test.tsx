@@ -8,9 +8,9 @@ it('Support has a mailto link to support@eratas.dev', () => {
   expect(screen.getByRole('link', { name: 'support@eratas.dev' })).toHaveAttribute('href', 'mailto:support@eratas.dev');
 });
 
-it('Support says RTAP is on iPhone now, with Android coming soon', () => {
+it('Support says RTAP runs on iPhone and Android', () => {
   render(<Support />);
-  expect(document.body.textContent).toMatch(/iPhone now\. Android is coming soon/);
+  expect(document.body.textContent).toMatch(/iPhone and Android\./);
 });
 
 it('Terms says not for real-world military use or targeting', () => {

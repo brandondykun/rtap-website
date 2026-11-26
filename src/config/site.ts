@@ -8,6 +8,8 @@ export const site = {
   supportEmail: 'support@eratas.dev',
   /** The App Store listing (no country, so Apple opens each visitor's own store). null shows the Coming soon badge instead. */
   appStoreUrl: 'https://apps.apple.com/app/id6834856833' as string | null,
+  /** The Google Play listing (no hl, so Play shows each visitor's own language). null leaves out the Google Play badge. */
+  playStoreUrl: 'https://play.google.com/store/apps/details?id=com.eratas.rtap' as string | null,
 };
 
 type Env = Record<string, string | undefined>;

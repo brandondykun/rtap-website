@@ -30,9 +30,9 @@ Run lint, typecheck, test, build and e2e before calling a change done.
 - **Colors mirror the app.** The tokens in `src/app/globals.css` copy `map/src/theme/tokens.ts`. Change them together.
 - **Value colors keep their meaning** (see `../map/AGENTS.md`, Value colors): `friendly` sky blue only for your own
   and friendly grids, `value-distance` amber for distances, affiliation colors only on unit symbols.
-- **Be honest about status.** RTAP is live on iPhone (`site.appStoreUrl`); Android is "coming soon". The call to
-  action is `StoreBadge`: Apple's official badge (`public/badges/app-store.svg`, unmodified), or our own "Coming soon"
-  pill with no Apple branding when `appStoreUrl` is null. V2 features (cloud sync, shared maps, team positions) are only
+- **Be honest about status.** RTAP is live on iPhone (`site.appStoreUrl`) and Android (`site.playStoreUrl`). The call
+  to action is `StoreBadge`: Apple's and Google's official badges (`public/badges/`, unmodified), each shown only when
+  its URL is set, or our own "Coming soon" pill with no store branding when both are null. V2 features (cloud sync, shared maps, team positions) are only
   ever "coming soon" or "in development".
 - **Tone:** calm, precise, technical. No camo, skulls, fake classification stamps, or copy that implies real-world
   combat or targeting. The footer says "Training & simulation only."; Terms has the full wording.

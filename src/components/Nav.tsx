@@ -31,14 +31,14 @@ export function Nav() {
           ))}
         </ul>
         <div className="flex items-center gap-3">
-          {site.appStoreUrl ? (
-            <a
-              href={site.appStoreUrl}
-              aria-label="Just released on the App Store"
+          {site.appStoreUrl || site.playStoreUrl ? (
+            <Link
+              href="/#download"
+              aria-label="Just released: get RTAP on the App Store or Google Play"
               className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent transition-colors hover:text-text"
             >
               Just released
-            </a>
+            </Link>
           ) : (
             <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">Coming soon</span>
           )}

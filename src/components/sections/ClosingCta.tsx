@@ -6,12 +6,12 @@ import { Tagline } from './Tagline';
 
 export function ClosingCta() {
   return (
-    <Section innerClassName="flex flex-col items-center justify-center gap-10 text-center sm:flex-row sm:text-left">
+    <Section id="download" innerClassName="flex flex-col items-center justify-center gap-10 text-center sm:flex-row sm:text-left">
       <PhoneFrame shot={screenshots.landing} sizes="180px" className="w-[180px] flex-none" />
       <div>
         <Tagline className="text-2xl sm:text-3xl" />
         <p className="mt-4 max-w-md text-base leading-relaxed text-text-muted">
-          Free on iPhone now, with Android coming soon. V1 is an early release, with sync and team sharing in development.
+          Free on iPhone and Android. V1 is an early release, with sync and team sharing in development.
         </p>
         <div className="mt-6">
           <StoreBadge />
