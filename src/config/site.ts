@@ -2,8 +2,11 @@ export const site = {
   name: 'RTAP',
   fullName: 'Realtime Team Awareness Platform',
   tagline: 'Locate. Communicate. Dominate.',
+  /** The app's store name, which the site title leads with so search results match the listings. */
+  title: 'RTAP - Realtime Team Awareness Platform',
+  /** Search-result snippet: Google shows about the first 155 characters, so the search terms come first. */
   description:
-    'An offline-first tactical map for plotting points, units, lines and areas on real terrain. Built by military and geospatial professionals.',
+    'Offline tactical map and mission planner for iPhone and Android. MIL-STD-2525C units, MGRS grids, range rings and 3D terrain. No server to set up.',
   company: 'Eratas Software LLC',
   supportEmail: 'support@eratas.dev',
   /** The App Store listing (no country, so Apple opens each visitor's own store). null shows the Coming soon badge instead. */

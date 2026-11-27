@@ -20,8 +20,8 @@ export function Hero() {
           <Eyebrow>Just released on iPhone and Android</Eyebrow>
           <h1 className="mt-4">
             <Logo size="lg" />
+            <span className="mt-3 block font-mono text-xs tracking-wide text-text-muted">Realtime Team Awareness Platform</span>
           </h1>
-          <p className="mt-3 font-mono text-xs tracking-wide text-text-muted">Realtime Team Awareness Platform</p>
           <Tagline className="mt-7 text-xl sm:text-2xl lg:text-[28px]" />
           <p className="mt-5 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
             An offline-first tactical map for plotting points, units, lines and areas on real terrain, in 2D or 3D. Built by military and geospatial professionals.
@@ -36,7 +36,7 @@ export function Hero() {
             </a>
           </div>
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-text-muted">
-            <span className="font-semibold text-text">Free on iPhone and Android.</span> This early release is the local-first
+            <span className="font-semibold text-text">Free on iPhone and Android, with no server to set up.</span> This early release is the local-first
             core. Shared maps and live team positions are in development.
           </p>
         </div>

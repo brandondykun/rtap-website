@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Prose } from '@/components/legal/Prose';
 import { site } from '@/config/site';
 
-export const metadata: Metadata = { title: 'Privacy', description: 'How RTAP handles your data.' };
+export const metadata: Metadata = { title: 'Privacy', description: 'How RTAP handles your data.', alternates: { canonical: '/privacy' } };
 
 // Drafted from what the app does (map/src/lib/monitoring/sentry.ts, local-only storage). Owner review before launch.
 export default function Privacy() {

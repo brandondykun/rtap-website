@@ -70,7 +70,7 @@ it('shows the landscape screenshots', () => {
 it('says up front that V1 is an early release with more coming', () => {
   const hero = screen.getByRole('heading', { level: 1 }).closest('section')!;
   expect(hero).toHaveTextContent(/early release/i);
-  expect(hero).toHaveTextContent(/free on iphone and android\./i);
+  expect(hero).toHaveTextContent(/free on iphone and android, with no server to set up\./i);
 });
 
 it('makes no offline claim the V1 map imagery cannot keep', () => {
@@ -103,4 +103,11 @@ it('describes OP mode as seeing real-life terrain to help plot, not as aiming', 
   const op = document.getElementById('3d-op')!;
   expect(op).toHaveTextContent(/as you would in real life/i);
   expect(op).not.toHaveTextContent(/line up the crosshair on a target/i);
+});
+
+it('puts the full app name in the h1 and says there is no server to set up', () => {
+  expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/RTAP\s*Realtime Team Awareness Platform/);
+  const hero = screen.getByRole('heading', { level: 1 }).closest('section')!;
+  expect(hero).toHaveTextContent(/no server to set up/i);
+  expect(screen.getByText('No server, no sign-up')).toBeInTheDocument();
 });

@@ -2,12 +2,20 @@ import type { Metadata } from 'next';
 import { Prose } from '@/components/legal/Prose';
 import { site } from '@/config/site';
 
-export const metadata: Metadata = { title: 'Support', description: 'Get help with RTAP.' };
+export const metadata: Metadata = {
+  title: 'Support',
+  description: 'Get help with RTAP: offline use, servers, where your data is stored, which phones it runs on, and how to reach us.',
+  alternates: { canonical: '/support' },
+};
 
 const FAQ = [
   [
     'Does RTAP work without signal?',
     'Yes. Everything you plot is saved on your phone, so missions, units and measurements all work offline. Map imagery is downloaded from Mapbox as you browse, so new areas need a connection.',
+  ],
+  [
+    'Do I need a server?',
+    'No. RTAP runs entirely on your phone, with no server to set up or host. Sync and sharing, now in development, will also work without a server of your own.',
   ],
   ['Where is my data stored?', 'On your phone. The current version has no accounts and no cloud copy.'],
   [

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Prose } from '@/components/legal/Prose';
 import { site } from '@/config/site';
 
-export const metadata: Metadata = { title: 'Terms', description: 'Terms of use for RTAP.' };
+export const metadata: Metadata = { title: 'Terms', description: 'Terms of use for RTAP.', alternates: { canonical: '/terms' } };
 
 // Draft. Owner review before launch.
 export default function Terms() {

@@ -3,7 +3,7 @@ import { Section } from '@/components/Section';
 
 const POINTS = [
   ['Saved the moment you plot', 'Every unit, line and area is written to your phone straight away. Nothing waits on a connection.'],
-  ['No sign-up', 'Open the app and start plotting. No account, no login.'],
+  ['No server, no sign-up', 'Nothing to set up or host. Open the app and start plotting: no server, no account, no login.'],
   ['Your data stays on your phone', 'V1 keeps every mission on your device. Nothing you plot is uploaded.'],
 ] as const;
 

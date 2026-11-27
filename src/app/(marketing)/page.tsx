@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { StructuredData } from '@/components/StructuredData';
 import { Capabilities } from '@/components/sections/Capabilities';
 import { ClosingCta } from '@/components/sections/ClosingCta';
 import { Hero } from '@/components/sections/Hero';
@@ -9,9 +11,12 @@ import { Roadmap } from '@/components/sections/Roadmap';
 import { SeeTheGround } from '@/components/sections/SeeTheGround';
 import { WhoBuiltIt } from '@/components/sections/WhoBuiltIt';
 
+export const metadata: Metadata = { alternates: { canonical: '/' } };
+
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Hero />
       <SeeTheGround />
       <Capabilities />

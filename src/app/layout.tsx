@@ -8,9 +8,9 @@ const jetbrainsMono = JetBrains_Mono({ variable: '--font-jetbrains-mono', subset
 
 export const metadata: Metadata = {
   metadataBase: siteUrl(),
-  title: { default: `${site.name}: ${site.tagline}`, template: `%s · ${site.name}` },
+  title: { default: `${site.title} | Offline Tactical Map for iPhone & Android`, template: `%s · ${site.name}` },
   description: site.description,
-  openGraph: { type: 'website', siteName: site.name, title: `${site.name}: ${site.tagline}`, description: site.description },
+  openGraph: { type: 'website', siteName: site.name, title: site.title, description: site.description },
   twitter: { card: 'summary_large_image' },
 };
 
